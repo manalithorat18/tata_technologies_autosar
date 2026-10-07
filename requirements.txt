@@ -1,0 +1,16 @@
+# Core pilot dependencies
+pymupdf>=1.24
+scikit-learn>=1.4
+faiss-cpu>=1.8
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+streamlit>=1.32
+requests>=2.31
+pydantic>=2.6
+
+# --- Production upgrade path (not required for the pilot) ---
+# Swap the TF-IDF embedder in backend/vectorstore.py for a real model:
+# sentence-transformers>=2.6      # BAAI/bge-small-en-v1.5, intfloat/e5-small-v2, etc.
+# Swap the extractive composer in backend/answer.py for a hosted/local LLM:
+# (e.g. an OpenAI-compatible client pointed at a local vLLM / Ollama server)
